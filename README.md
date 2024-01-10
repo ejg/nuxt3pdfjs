@@ -1,6 +1,7 @@
 # Nuxt 3 - pdfjs express viewer problems
 
 Nuxt 3.9.1
+
 PDF JS 8.7.4
 
 The only thing added to Nuxt is the pdf js files.
@@ -11,7 +12,7 @@ https://apryse.com/blog/webviewer/how-to-build-a-nuxt-pdf-viewer-with-nuxtjs
 
 ## Setup
 
-npm install
+`npm install`
 
 ## Dev
 
