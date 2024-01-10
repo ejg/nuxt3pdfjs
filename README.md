@@ -7,6 +7,7 @@ PDF JS 8.7.4
 The only thing added to Nuxt is the pdf js files.
 
 I used the files from:
+
 https://pdfjs.express/documentation/get-started-viewer/vue
 
 https://apryse.com/blog/webviewer/how-to-build-a-nuxt-pdf-viewer-with-nuxtjs
