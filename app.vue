@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <WebViewer />
+    <!-- <WebViewerNoWindow /> -->
   </div>
 </template>
 
