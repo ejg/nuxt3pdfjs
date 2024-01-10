@@ -60,13 +60,19 @@ open Dev tools -- errors in console
 
 the files not found but linked from /lib/ui/index.html
 
+// missing ui after lib
+
 http://localhost:3000/lib/style.css
+
+// missing lib before core
 
 http://localhost:3000/core/webviewer-core.min.js
 
 http://localhost:3000/core/pdfjs/PDFJSDocumentType.js
 
 http://localhost:3000/core/pdfjs/UIConfig.js
+
+//missing ui after lib
 
 http://localhost:3000/lib/webviewer-ui.min.js
 
