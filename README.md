@@ -1,75 +1,69 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 - pdfjs express viewer problems
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt 3.9.1
+PDF JS 8.7.4
+
+The only thing added to Nuxt is the pdf js files.
+
+I used the files from:
+https://pdfjs.express/documentation/get-started-viewer/vue
+https://apryse.com/blog/webviewer/how-to-build-a-nuxt-pdf-viewer-with-nuxtjs
 
 ## Setup
 
-Make sure to install the dependencies:
-
-```bash
-# npm
 npm install
 
-# pnpm
-pnpm install
+## Dev
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
 
-# pnpm
-pnpm run dev
+see the code in http://localhost:3000/
 
-# yarn
-yarn dev
+open Dev tools and everythings loads correctly
 
-# bun
-bun run dev
-```
+files are at
+http://localhost:3000/lib/ui/style.css
+http://localhost:3000/lib/core/webviewer-core.min.js
+http://localhost:3000/lib/core/pdfjs/PDFJSDocumentType.js
+http://localhost:3000/lib/core/pdfjs/UIConfig.js
+http://localhost:3000/lib/ui/webviewer-ui.min.js
 
-## Production
+## Build
 
-Build the application for production:
+npx nuxi build
 
-```bash
-# npm
-npm run build
+node .output/server/index.mjs
 
-# pnpm
-pnpm run build
+see the code in http://localhost:3000/
 
-# yarn
-yarn build
+open Dev tools and everythings loads correctly
 
-# bun
-bun run build
-```
+same file paths as above
 
-Locally preview production build:
+## Build
 
-```bash
-# npm
-npm run preview
+npx nuxi generate
 
-# pnpm
-pnpm run preview
+npx serve .output/public
 
-# yarn
-yarn preview
+see the code in http://localhost:3000/
 
-# bun
-bun run preview
-```
+open Dev tools
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+the files not found but linked from /lib/ui/index.html
+
+http://localhost:3000/lib/style.css
+http://localhost:3000/core/webviewer-core.min.js
+http://localhost:3000/core/pdfjs/PDFJSDocumentType.js
+http://localhost:3000/core/pdfjs/UIConfig.js
+http://localhost:3000/lib/webviewer-ui.min.js
+
+If I copy the
+
+public/webviewer/core folder to
+public/core and the
+public/webviewer/ui files to
+public/webviewer and run npx nuxi generate the pdf viewer works.
+
+Note: if the WebViewer component is not wrapped in the import/then, the npm nuxi generate fails with a "window not defined message"
+You can see that if, in App.vue, you comment out the WebViewer component and uncomment out WebViewerNoWindow
