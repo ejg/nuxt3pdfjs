@@ -70,5 +70,7 @@ http://localhost:3000/core/pdfjs/UIConfig.js
 
 http://localhost:3000/lib/webviewer-ui.min.js
 
-Note: if the WebViewer component is not wrapped in the import/then, the npm nuxi generate fails with a "window not defined message"
+## Other
+
+If the WebViewer component is not wrapped in the import/then, the npm nuxi generate fails with a "window not defined message"
 You can see that if, in App.vue, you comment out the WebViewer component and uncomment out WebViewerNoWindow
