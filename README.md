@@ -58,7 +58,9 @@ http://localhost:3000/ doesn't load
 
 open Dev tools -- errors in console
 
-the files not found but linked from /lib/ui/index.html
+the files are not found but linked from `/lib/ui/index.html`
+
+`/lib/ui/index.html` is redirected to `/lib/ui/index/` which is then redirected to `/lib/ui` so the current path is now `/lib/` and all the relative path links fail.
 
 // missing ui after lib
 
