@@ -62,6 +62,14 @@ the files are not found but linked from `/lib/ui/index.html`
 
 `/lib/ui/index.html` is redirected to `/lib/ui/index/` which is then redirected to `/lib/ui` so the current path is now `/lib/` and all the relative path links fail.
 
+```
+<link rel="stylesheet" href="./style.css">
+ <script src="../core/webviewer-core.min.js"></script>
+ <script src="../core/pdfjs/PDFJSDocumentType.js"></script>
+ <script src="../core/pdfjs/UIConfig.js"></script>
+ <script src="webviewer-ui.min.js"></script>
+```
+
 // missing ui after lib
 
 http://localhost:3000/lib/style.css
